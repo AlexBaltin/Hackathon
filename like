@@ -1,0 +1,16 @@
+def check_movie_and_feedback(movie_name, movie_table):
+    # Check if the movie exists in the table (a list in this case)
+    if movie_name in MovieWatchListMaker:
+        print(f"{movie_name} is in the list.")
+        
+        # Ask the user if they liked the movie
+        feedback = input(f"Did you like the movie '{movie_name}'? (yes/no): ").strip().lower()
+        
+        if feedback == 'yes':
+            print(f"Great! Glad you enjoyed '{movie_name}'.")
+        elif feedback == 'no':
+            print(f"Sorry to hear that you didn't like '{movie_name}'.")
+        else:
+            print("Invalid input. Please respond with 'yes' or 'no'.")
+    else:
+        print(f"{movie_name} is not in the list.")
